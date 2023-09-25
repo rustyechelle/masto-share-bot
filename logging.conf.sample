@@ -1,0 +1,34 @@
+[loggers]
+keys=root
+
+[handlers]
+keys=console,appFile
+
+[formatters]
+keys=simple
+
+[logger_root]
+; level=DEBUG
+level=INFO
+handlers=console,appFile
+
+; [logger_bot1]
+; level=DEBUG
+; handlers=console,appFile
+; qualname=bot1
+; propagate=0
+
+[handler_console]
+class=StreamHandler
+level=DEBUG
+formatter=simple
+args=(sys.stdout,)
+
+[handler_appFile]
+class=FileHandler
+level=INFO
+formatter=simple
+args=('app.log',)
+
+[formatter_simple]
+format=%(asctime)s - %(name)s - %(levelname)s - %(message)s

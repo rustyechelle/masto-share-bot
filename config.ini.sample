@@ -1,0 +1,10 @@
+[autoshare1]
+InstanceBaseUrl = https://mastodon.local/
+UserApiKey = env:MASTO_API_KEY
+
+Type = AutoShareTags
+UserLimit = 2000
+BoostLimit = 100
+TimelineCheckFrequency = 10
+NotificationCheckFrequency = 10
+
